@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<p></p>
+<nav>
+    <ul>
+        <li>@Html.ActionLink("Home Page", "Index")</li>
+        <li>@Html.ActionLink("About Us", "AboutUs")</li>
+        <li>@Html.ActionLink("Contact Us", "ContactUs")</li>
+    </ul>
+</nav>
+<h2>Index</h2>
+<h3>This is index Page</h3>
+
+<input type="text" name="fullname" id="fullname" value="" />
+<br />
+<br />
+@Html.TextBox("fullname", "Hello World!",
+    new
+    {
+        style = "background:red; color:yellow; font-weight:bold;",
+        title = "Please enter"
+    })
+<br />
+<br />
+@Html.TextBox("fullname", "Hello World!",
+    new
+    {
+        @class = "TextBoxStyle",
+        title = "Lorem ipsum"
+    })
+<br />
+<br />
+
+@Html.TextBox("fullname", "BootStrap", 
+    new
+    {
+        @class = "form-control", //Using reserved word of C# as attribute then place "@" in front of it
+        title = "Lorem ipsum",
+        @readonly = "true"
+    })
